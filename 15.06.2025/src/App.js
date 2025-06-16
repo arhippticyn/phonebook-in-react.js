@@ -84,6 +84,7 @@ deleteBtn = (id) => {
 
 
         <h2>Contacts</h2>
+        <h3>Find contacts by name</h3>
         <Filter filter={this.state.filter} onFilter={this.handleFilterChange} />
 
         <Contacts contacts={filteredContacts} deleteBtn={this.deleteBtn} />

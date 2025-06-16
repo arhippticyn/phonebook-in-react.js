@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from 'nanoid'
-import { styles } from '../styles/PhoneBook.module.css'
+import styles from '../styles/PhoneBook.module.css'
 
 class PhoneBook extends Component {
     constructor(props) {
@@ -15,9 +15,10 @@ class PhoneBook extends Component {
         return (
             <div>
 
-            <form action="" onSubmit={sub}>
-                <label htmlFor="name">Name</label>
+            <form className={styles.form} action="" onSubmit={sub}>
+                <label className={styles.label} htmlFor="name">Name</label>
                 <input
+                className={styles.input}
                 onChange={changeN}
                   type="text"
                   name="name"
@@ -26,8 +27,9 @@ class PhoneBook extends Component {
                   title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                   required
                 />
-                <label htmlFor="number">Number</label>
+                <label className={styles.label} htmlFor="number">Number</label>
                 <input
+                   className={styles.input}
                    onChange={changeNum}
                    type="tel"
                    name="number"
@@ -36,7 +38,7 @@ class PhoneBook extends Component {
                    title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                    required
                 />
-                <button type="submit">Add contact</button>
+                <button className={styles.btn} type="submit">Add contact</button>
             </form>  
             </div>
 

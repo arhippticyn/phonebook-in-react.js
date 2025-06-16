@@ -8,12 +8,16 @@ class Filter extends Component {
         const { filter, onFilter } = this.props
 
         return(
+            <div>
+            
             <input 
           type="text"
           name="filter"
           value={filter}
           onChange={onFilter}
-          placeholder="Search..."/>
+          placeholder="Search..."/>  
+            </div>
+
         )
     }
 }
